@@ -14,11 +14,33 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: Container(
         constraints: BoxConstraints.expand(),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/bulutluu.png'),
+            image: AssetImage('assets/gece.jpg'),
             fit: BoxFit.cover,
           ),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              child: Icon(FontAwesomeIcons.cloud,
+                  size: 75.0, color: Colors.white), //Bulut iconu eklendi.
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Center(
+              child: Text(
+                '12°',
+                style: TextStyle(
+                    color: Colors.white, fontSize: 80.0, letterSpacing: -5),
+              ),
+            )
+          ],
         ),
       ),
     );
